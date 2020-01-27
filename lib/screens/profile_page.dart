@@ -61,11 +61,9 @@ class _ProfilePageState extends State<ProfilePage>
                 children: <Widget>[
                   Text(
                     "5",
-                    style: textStyle,
                   ),
                   Text(
                     "5",
-                    style: textStyle,
                   ),
                 ],
               ),
@@ -99,7 +97,6 @@ class _ProfilePageState extends State<ProfilePage>
                         child: Container(
                           child: Text(
                             choice.title,
-                            style: tabsStyle,
                           ),
                         ),
                       );

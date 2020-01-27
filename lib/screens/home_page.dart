@@ -64,7 +64,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               children: <Widget>[
                 ForyouPage(),
                 CatageryPage(),
-                NewPage(),
+                ForYou(),
               ],
             ),
           )
