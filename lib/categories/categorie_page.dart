@@ -1,4 +1,4 @@
-import 'package:books_view/catagory/sub_category_page.dart';
+import 'package:books_view/categories/sub_category_page.dart';
 import 'package:books_view/util/categories_details.dart';
 import 'package:books_view/widgets/category_item.dart';
 import 'package:flutter/material.dart';

@@ -1,14 +1,13 @@
-import 'package:books_view/catagory/catagory_page.dart';
+import 'package:books_view/categories/categorie_page.dart';
 import 'package:books_view/constants/constants.dart';
-import 'package:books_view/tabbars/foryou_page.dart';
-import 'package:books_view/tabbars/new_page.dart';
-import 'package:books_view/util/choice_tabs.dart';
+import 'package:books_view/foryou_page/foryou_page.dart';
+import 'package:books_view/new_page/new_page.dart';
 import 'package:flutter/material.dart';
 
-const List<Choice> choices = <Choice>[
-  Choice(title: 'ForYou'),
-  Choice(title: 'Catagory'),
-  Choice(title: 'New'),
+const List<String> choices = [
+  'ForYou',
+  'Catagory',
+  'New',
 ];
 
 class HomePage extends StatefulWidget {
@@ -47,10 +46,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             isScrollable: true,
             tabs: choices
                 .map<Widget>(
-                  (Choice choice) => Tab(
+                  (choice) => Tab(
                     child: Container(
                       child: Text(
-                        choice.title,
+                        choice,
                         style: tabsStyle,
                       ),
                     ),

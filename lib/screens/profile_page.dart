@@ -1,11 +1,10 @@
 import 'package:books_view/constants/constants.dart';
-import 'package:books_view/util/choice_tabs.dart';
 import 'package:flutter/material.dart';
 
-const List<Choice> choices = <Choice>[
-  Choice(title: 'BooksSelf'),
-  Choice(title: 'Likes'),
-  Choice(title: 'Collections'),
+const List<String> choices = [
+  'BooksSelf',
+  'Likes',
+  'Collections',
 ];
 const SizedBox sizedBox = SizedBox(
   height: 10,
@@ -92,11 +91,11 @@ class _ProfilePageState extends State<ProfilePage>
                     labelColor: Colors.amber[500],
                     unselectedLabelColor: Colors.black54,
                     isScrollable: true,
-                    tabs: choices.map<Widget>((Choice choice) {
+                    tabs: choices.map<Widget>((choice) {
                       return Tab(
                         child: Container(
                           child: Text(
-                            choice.title,
+                            choice,
                           ),
                         ),
                       );
