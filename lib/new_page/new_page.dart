@@ -1,5 +1,5 @@
 import 'package:books_view/util/categories_details.dart';
-import 'package:books_view/widgets/foryou_item.dart';
+import 'package:books_view/widgets/new_item.dart';
 import 'package:flutter/material.dart';
 
 class ForYou extends StatelessWidget {
@@ -16,7 +16,7 @@ class ForYou extends StatelessWidget {
 
   Widget buildItem(BuildContext context, String key) {
     return GestureDetector(
-      child: ForYouItem(
+      child: NewItem(
         title: key,
       ),
     );

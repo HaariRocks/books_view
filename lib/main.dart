@@ -1,7 +1,9 @@
 import 'package:books_view/screens/home_page.dart';
 import 'package:books_view/screens/middle_page.dart';
 import 'package:books_view/screens/profile_page.dart';
+import 'package:books_view/util/foryou_details.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() => runApp(MyAppDemo());
 
@@ -40,30 +42,35 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: MyApp._widgetOptions.elementAt(_selectedIndex),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home,
+    return MultiProvider(
+      providers: [
+        Provider(create: (context) => ForyouModel()),
+      ],
+      child: Scaffold(
+        body: Center(
+          child: MyApp._widgetOptions.elementAt(_selectedIndex),
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home,
+              ),
+              title: Text('Home'),
             ),
-            title: Text('Home'),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.add),
-            title: Text('Add'),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            title: Text('Settings'),
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[500],
-        onTap: _onItemTapped,
+            BottomNavigationBarItem(
+              icon: Icon(Icons.add),
+              title: Text('Add'),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.settings),
+              title: Text('Settings'),
+            ),
+          ],
+          currentIndex: _selectedIndex,
+          selectedItemColor: Colors.amber[500],
+          onTap: _onItemTapped,
+        ),
       ),
     );
   }

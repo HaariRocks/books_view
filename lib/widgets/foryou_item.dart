@@ -87,7 +87,7 @@ class ForYouItem extends StatelessWidget {
                             width: 10,
                           ),
                           Text(
-                            "300",
+                            "3000",
                             style: TextStyle(
                                 decoration: TextDecoration.lineThrough),
                           ),

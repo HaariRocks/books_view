@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class ForYouItem extends StatelessWidget {
+class NewItem extends StatelessWidget {
   final String title;
   final String image;
-  ForYouItem({this.title = 'Book Name', this.image});
+  NewItem({this.title = 'Book Name', this.image});
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -87,7 +87,7 @@ class ForYouItem extends StatelessWidget {
                             width: 10,
                           ),
                           Text(
-                            "300",
+                            "3000",
                             style: TextStyle(
                                 decoration: TextDecoration.lineThrough),
                           ),
