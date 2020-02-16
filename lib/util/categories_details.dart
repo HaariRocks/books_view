@@ -16,7 +16,13 @@ Map<String, List<String>> categoryDetails = <String, List<String>>{
     'Petroleum'
   ],
   'Law': null,
-  'Religious': ['Hinduism', 'Islam', 'Christianity', 'Budhism', 'Jainism'],
+  'Religious': [
+    'Hinduism',
+    'Islam',
+    'Christianity',
+    'Budhism',
+    'Jainism',
+  ],
   'Poetry': null,
   'Philosophy': null,
   'Novel': [
