@@ -10,8 +10,11 @@ class ForyouPage extends StatelessWidget {
       body: CustomScrollView(
         slivers: [
           SliverList(
-              delegate: SliverChildBuilderDelegate(
-                  (context, index) => MyListItem(index)))
+            delegate: SliverChildBuilderDelegate(
+              (context, index) => MyListItem(index),
+              childCount: 12,
+            ),
+          )
         ],
       ),
     );

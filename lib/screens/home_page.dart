@@ -1,7 +1,8 @@
+import 'package:books_view/book_card/book_card.dart';
 import 'package:books_view/categories/categorie_page.dart';
 import 'package:books_view/constants/constants.dart';
 import 'package:books_view/foryou_page/foryou_page.dart';
-import 'package:books_view/new_page/new_page.dart';
+// import 'package:books_view/new_page/new_page.dart';
 import 'package:flutter/material.dart';
 
 const List<String> choices = [
@@ -63,7 +64,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               children: <Widget>[
                 ForyouPage(),
                 CatageryPage(),
-                ForYou(),
+                BookCardPage(),
               ],
             ),
           )
